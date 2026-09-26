@@ -1,190 +1,290 @@
-# Draconic Fractals — Generative Art
+# Draconic Fractals
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green?style=for-the-badge)](https://reyrove.github.io/Draconic-Fractals-Generative-Art)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+**A seed-based generative system for tiled dragon-curve compositions.**
 
-> **Generative dragon curve fractals.** Each refresh creates a unique tiled composition of the legendary Heighway dragon curve with colorful curved segments and infinite complexity.
-
-## 🎨 Live Demo
-
-<div align="center">
-  <a href="https://reyrove.github.io/Draconic-Fractals-Generative-Art" target="_blank">
-    <img src="demo-screenshot.jpg" alt="Draconic Fractals Website Demo" width="800" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4);"/>
-  </a>
-  <br><br>
-  <a href="https://reyrove.github.io/Draconic-Fractals-Generative-Art" target="_blank">
-    <img src="https://img.shields.io/badge/🌐_View_Live_Demo-0a0a0a?style=for-the-badge&logo=githubpages&logoColor=white&color=c9a84c" alt="View Live Demo" width="300"/>
-  </a>
-  <br>
-  <em>Click the image or button to experience the generative art</em>
-</div>
-
-## 👕 Apparel Preview
-
-<div align="center">
-  <img src="Draconic-Fractals.jpg" alt="Draconic Fractals on T-Shirt" width="600" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);"/>
-  <br>
-  <em>Draconic Fractals artwork printed on a T-shirt</em>
-</div>
-
-## ✨ Features
-
-- **Dragon Curve** — Legendary Heighway dragon fractal
-- **Tiled Composition** — Multiple dragon curves arranged in a grid
-- **Smooth Curves** — Quadratic Bezier curves for elegant rendering
-- **Color Palettes** — Random HSB color palettes
-- **Infinite Complexity** — Fractal recursion with self-similarity
-- **Seed-Based** — Every composition is unique and reproducible via its seed
-- **Save & Share** — Download as PNG with seed in filename
-- **Apparel Mode** — Preview artwork on a T-shirt mockup
-- **Responsive** — Works on desktop, tablet, and mobile
-- **Pure JavaScript** — No external dependencies
-- **Keyboard Shortcuts**:
-  - `R` — Regenerate
-  - `S` — Save image
-  - `T` — Toggle apparel view
-
-## 🎨 Artwork Details
-
-| Parameter | Range | Description |
-|-----------|-------|-------------|
-| **Fractal Order** | 5–11 | Recursion depth |
-| **Tile Grid** | Up to 181×181 | Number of tiles |
-| **Tile Skip** | 1–5 | Pattern variation |
-| **Segments** | Thousands | Total curve segments |
-| **Color Palettes** | 4 colors | Random HSB palettes |
-
-## 🐉 The Dragon Curve
-
-The Heighway dragon curve (also known as the Harter-Heighway dragon) is a fascinating fractal discovered by NASA physicists John Heighway and Bruce Banks. It's created by repeatedly folding a strip of paper in half and then unfolding it at right angles. The resulting curve exhibits self-similarity and infinite complexity.
-
-### Dragon Curve Properties:
-- Self-similar at all scales
-- Never self-intersects
-- Fills the plane as order approaches infinity
-- Forms a space-filling curve
-
-## 🚀 Quick Start
-
-### Local Development
-
-```bash
-# Clone the repository
-git clone https://github.com/reyrove/Draconic-Fractals-Generative-Art.git
-
-# Navigate to the directory
-cd Draconic-Fractals-Generative-Art
-
-# Open in browser
-open index.html
-# or use a live server
-```
-
-### Deploy to GitHub Pages
-
-1. Push to GitHub
-2. Go to Settings → Pages
-3. Select branch `main` and root folder
-4. Your site will be live at `https://reyrove.github.io/Draconic-Fractals-Generative-Art`
-
-## 🧠 How It Works
-
-The artwork is generated using a deterministic random number generator, seeded by timestamp + random noise. Every refresh:
-
-1. **Setup**:
-   - Random fractal order (5-11)
-   - Random tile skip pattern (1-5)
-   - Random HSB color palette
-
-2. **Fractal Generation**:
-   - Dragon curve recursively generated
-   - Each order adds more complexity
-   - Tiled across the canvas
-
-3. **Rendering**:
-   - Black background
-   - Each segment rendered as a quadratic Bezier curve
-   - Random HSB colors from palette
-   - Curves flow elegantly
-
-## 📁 File Structure
-
-```
-Draconic-Fractals-Generative-Art/
-├── index.html              # Main application (all-in-one)
-├── Draconic-Fractals.jpg   # T-shirt mockup image
-├── fav.svg                 # Favicon
-├── demo-screenshot.jpg     # Website demo screenshot
-├── README.md               # This file
-└── LICENSE                 # MIT License
-```
-
-## 🛠️ Tech Stack
-
-- **Pure Vanilla HTML/CSS/JS** — No dependencies
-- **Canvas API** — 2D rendering
-- **HSB Color Model** — Random color generation
-- **CSS Flexbox/Grid** — Responsive layout
-- **GitHub Pages** — Hosting
-
-## 🎯 Interactive Controls
-
-| Action | Keyboard | Button |
-|--------|----------|--------|
-| Regenerate | `R` | Click "regenerate" |
-| Save Image | `S` | Click "regenerate" |
-| Toggle Apparel | `T` | Click "apparel" |
-
-## 🎨 The Creative Process
-
-### Dragon Curve Generation
-The dragon curve is generated recursively:
-1. Start with a straight line segment
-2. Replace it with two segments at right angles
-3. Repeat recursively
-
-### Tiling
-Multiple dragon curves are arranged in a grid with alternating orientations, creating a complex, mosaic-like composition.
-
-### Smooth Curves
-Each segment is rendered as a quadratic Bezier curve, creating smooth, flowing lines instead of sharp corners.
-
-### Color Palette
-Random HSB color palettes create vibrant, harmonious color schemes that bring the fractal to life.
-
-## 📱 Responsive Design
-
-The application automatically adapts to:
-- Desktop screens
-- Tablets
-- Mobile phones
-- Landscape orientation
-- Various aspect ratios
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-- Fork the repository
-- Create a feature branch
-- Submit a pull request
-
-### Ideas for Contributions:
-- New fractal types
-- Additional tiling patterns
-- Animation features
-- Color palette expansions
-- Performance optimizations
-
-## 📄 License
-
-MIT License — see [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Inspired by the Heighway dragon curve
-- Pure JavaScript implementation
-- Special thanks to the creative coding community
+A catalogue of computational textile compositions for fashion, textile and surface design — algorithmically drawn, seed-documented, and ready for production.
 
 ---
 
-**Built with ❤️ and draconic recursion**
+## Overview
+
+Draconic Fractals is a generative design system rather than a single artwork. Each composition is built from a grid of tiles, each one containing a dragon curve — a famous fractal generated by repeatedly folding a line at right angles. Alternating tiles are rotated by 90°, and every segment is coloured from a small hue palette, producing a dense, tessellated field.
+
+The system is designed for:
+
+- **Fashion houses** adapting fractal ornament for apparel and accessories
+- **Textile studios** developing repeat patterns and yardage
+- **Surface designers** working across print, wallpaper, and interior applications
+
+Every composition can be licensed, adapted, or commissioned to a brief.
+
+---
+
+## Concept
+
+A curve, when it is *folded onto itself*, becomes a dragon — recursive, self-similar, quietly yours.
+
+The recursive curve — folded, re-folded, endlessly self-similar — has always carried the mark of a living system. From the spiral of a seashell to the branching of a river delta, natural forms build themselves by repeating a simple rule. Draconic Fractals translates that rule into code. Each composition begins with a tile grid and unfolds through recursion, rotation, and colour, until the frame fills with a tessellated field of dragon curves.
+
+The recursion order, the tile skip pattern, and the hue palette are all derived from a single numeric seed.
+
+Like the other still volumes in this series (Girih, Arachne, Celestial Grove, ChaotiColor, Citrus Mosaic, Crazy Knight Curve, Crazy Knight Line, Crazy Letter, cyPollock, Digital Pollen), **Draconic Fractals is a static composition.** The plate, the framed plate, the surfaces, and the archive are all static frames. A fractal is something you read; its character is stillness, not motion.
+
+---
+
+## Features
+
+- **Seed-based generation** — every composition is defined by a numeric seed and can be regenerated exactly
+- **Deterministic output** — the same seed always produces the same composition
+- **Dragon curve** — the classic fractal: a line folded at right angles, one step at a time
+- **Tiled field** — the curve is replicated on a grid of tiles, each orientation determined by the tile pattern
+- **Alternating rotation** — odd tiles vertical, even tiles horizontal
+- **Four-colour palette** — a base hue plus three offsets, so adjacent segments alternate colour
+- **Recursion orders 5–10** — from coarse (~32 tiles) to fine (~1,024 tiles)
+- **Curved segments** — every segment is drawn as a quadratic curve, giving it a soft, hand-drawn feel
+- **Adaptive surfaces** — one seed applied across print, scarf, textile, and wall formats
+- **Archive** — eight curated seeds available for immediate loading
+- **Download** — export the composition as a high-resolution PNG
+- **Keyboard shortcuts** — `R` for new seed, `S` to save
+
+---
+
+## Project Structure
+
+```
+.
+├── index.html          # Main catalogue page
+├── images/
+│   ├── fav.svg         # Favicon
+│   ├── tote.png        # Mockup: tote bag
+│   ├── tee.png         # Mockup: t-shirt
+│   └── cushion.png     # Mockup: cushion
+└── README.md
+```
+
+---
+
+## How It Works
+
+### The Seed
+
+A numeric seed (a large integer) initializes a deterministic pseudo-random generator. From this seed, the system derives:
+
+- Recursion order (5–10)
+- Tile skip pattern (1–5)
+- Base hue (0–360°)
+- Per-colour hue jitter (four values)
+
+Because the generator is deterministic, the same seed always produces the same composition — on any device, at any time.
+
+### The Dragon Curve
+
+The dragon curve is a fractal generated by repeatedly folding a line at right angles. Starting from a single straight segment, each iteration replaces the entire curve with two copies of itself, joined at a 90° fold.
+
+The algorithm is recursive:
+
+1. If `order == 0`, the segment is a single straight line — done.
+2. Otherwise, compute the midpoint of the current line.
+3. Compute a "new midpoint" rotated by 90° around the original midpoint.
+4. Recurse on both halves: (start → newMid) and (newMid → end).
+
+The result after `order` iterations is a curve with `2^order` segments. At order 5, that's 32 segments per tile; at order 10, that's 1,024 segments per tile.
+
+### The Grid
+
+The grid dimension is derived from the order:
+
+```
+size = 2^(order / 2)
+```
+
+This means:
+
+- Order 5 → 5×5 grid
+- Order 6 → 8×8 grid
+- Order 8 → 16×16 grid
+- Order 10 → 32×32 grid
+
+The tile size is `canvasWidth / size`, so the full composition contains roughly `2^order` segments in each dimension. At order 10, that's over 1 million individual line strokes across the frame — producing an extremely fine, textile-like detail.
+
+### The Tile Pattern
+
+Each tile contains a dragon curve, either oriented **vertically** or **horizontally**. The orientation is decided by a simple check:
+
+```
+blackTile = (x + y) % tileSkip === 0
+```
+
+If the tile is "black", it gets a vertical curve; otherwise horizontal. The `tileSkip` value (1–5) controls the density of orientation changes:
+
+- `tileSkip = 1` → every tile is vertical → uniform field
+- `tileSkip = 2` → alternating checkerboard of orientations
+- `tileSkip = 3, 4, 5` → more complex interference patterns
+
+### The Palette
+
+Four colours are generated from a base hue, each one offset by a different random jitter:
+
+| Colour | Hue offset    |
+|--------|---------------|
+| 1      | base          |
+| 2      | base + jitter × 60°  |
+| 3      | base + jitter × 120° |
+| 4      | base + jitter × 180° |
+
+All four are drawn in HSL space with fixed saturation (0.8) and lightness (0.5), so the palette reads as a coherent family. Adjacent segments alternate colour, giving the curve a woven, kaleidoscopic feel.
+
+### The Segments
+
+Each segment of the dragon curve is drawn not as a straight line, but as a **quadratic curve** — two connected quadratic Bézier arcs between the endpoints. This gives the curve a soft, drawn quality, as if the fractal had been sketched rather than plotted.
+
+### The Surfaces
+
+The same seed is rendered across four surface formats. These are static frames — they represent the print-ready composition.
+
+| Surface  | Aspect | Material          |
+|----------|--------|-------------------|
+| Print    | 1 : 1  | Cotton rag        |
+| Scarf    | 3 : 1  | Twill silk        |
+| Textile  | 4 : 3  | Fabric yardage    |
+| Wall     | 2 : 3  | Wallpaper         |
+
+Each surface uses the same underlying seed and structural logic — only the repeat, orientation, and scale change.
+
+### Stillness
+
+Like the rest of the still volumes, Draconic Fractals does not animate. The plate is a single frozen frame — the composition is complete the moment it is generated.
+
+This is a deliberate design choice. A fractal is not a swarm. It is not a rotation. It is a curve, folded once and left. Its stillness is what makes it print-ready in the strictest sense: what you see is what you get.
+
+---
+
+## Usage
+
+### In the browser
+
+1. Open `index.html` in any modern browser.
+2. Click **New Seed** to generate a new composition.
+3. Click **Download** to save the composition as a PNG.
+4. Scroll to the **Archive** section and click any plate to load it into Plate 001.
+
+### Keyboard shortcuts
+
+| Key | Action          |
+|-----|-----------------|
+| `R` | New seed        |
+| `S` | Save as PNG     |
+
+### Reproducing a composition
+
+Each composition is identified by an 8-digit seed label displayed in the metadata panel. To reproduce a specific composition, note the seed and regenerate it programmatically:
+
+```js
+const rng = new RandomGenerator(seed);
+const features = buildFeatures(rng);
+renderComposition(canvas, features, rng);
+```
+
+Because the generator is deterministic, this will produce the identical composition on any device.
+
+---
+
+## Technical Notes
+
+- **No build step.** The system is a single HTML file with inline CSS and JavaScript.
+- **No dependencies.** All drawing is done with the native Canvas 2D API.
+- **Deterministic.** The `RandomGenerator` class uses a xorshift-based PRNG seeded by an integer, so identical seeds produce identical outputs.
+- **Static rendering.** Every canvas renders a single frame. There is no animation loop.
+- **Feature isolation.** Cover, framed plate, surfaces, and archive thumbnails each derive their own feature set from their own local RNG, without disturbing the main plate's state.
+- **Bounded recursion.** The dragon curve recursion has a fixed depth (5–10), so even at the highest order the recursion is shallow and safe.
+- **Segment normalization.** After generating all segments, the system computes the bounding box and scales the whole curve to fit the canvas with 5% padding.
+- **Curved segments.** Each segment is drawn as two connected quadratic Béziers, giving the fractal a soft, drawn quality.
+- **Responsive.** The layout adapts from large desktop down to very small mobile devices (tested at 360px viewport width).
+- **Accessible.** Supports `prefers-reduced-motion`. Pinch-zoom is enabled.
+
+### Browser support
+
+Tested in current versions of:
+
+- Chrome / Edge
+- Firefox
+- Safari (desktop and iOS)
+
+---
+
+## Licensing
+
+All Draconic Fractals compositions are **seed-documented** and available for licensing across textile, surface, and print applications.
+
+- **Standard licenses** cover single-product production runs.
+- **Commercial use, custom editions, or exclusive rights** are available on request.
+
+Each license is issued against a specific seed ID. Regeneration of the same seed produces the identical composition — ensuring reproducibility between artist, studio, and manufacturer.
+
+For licensing enquiries: [reyhanehdaneshdoost@gmail.com](mailto:reyhanehdaneshdoost@gmail.com)
+
+---
+
+## Commission
+
+Draconic Fractals is a generative design system, not a fixed artwork. It can be adapted for specific briefs:
+
+| Service     | Description                                                       |
+|-------------|-------------------------------------------------------------------|
+| Licensing   | Existing seeds from the archive, licensed for production use      |
+| Commission  | New compositions designed to your palette, repeat, and product    |
+| Systems     | A private generative tool built for your studio's ongoing use     |
+
+To begin a conversation: [reyhanehdaneshdoost@gmail.com](mailto:reyhanehdaneshdoost@gmail.com)
+
+---
+
+## Series
+
+Draconic Fractals is part of a computational textile series. Each volume approaches ornament from a different structural angle:
+
+| Volume                | Structure                    | Motion                     |
+|-----------------------|------------------------------|----------------------------|
+| Girih 1               | Islamic geometric            | Static                     |
+| Arachne               | Rotating rings               | Static                     |
+| Baroque Me Baby       | Baroque frames               | Static                     |
+| Bezier 1              | Concentric curves            | Static                     |
+| Bezier 2              | Single rotating curve        | Animated (plate)           |
+| Brownian Graphe       | Graph networks               | Animated + interactive     |
+| Celestial Grove       | Recursive branch trees       | Static                     |
+| ChaotiColor           | Cellular automata            | Static                     |
+| Citrus Mosaic         | Arc-and-triangle tiles       | Static                     |
+| Crazy Knight Curve    | Knight's-tour smooth path    | Static                     |
+| Crazy Knight Line     | Knight's-tour gradient       | Static                     |
+| Crazy Letter          | Framed wavy lines            | Static                     |
+| cyPollock             | Scattered branch field       | Static                     |
+| Digital Pollen        | Noise-driven texture         | Static                     |
+| **Draconic Fractals** | **Tiled dragon curve**       | **Static**                 |
+
+The series is designed as a coherent whole — same page structure, same seed logic, same licensing and commission terms — so that each volume can be presented individually or as part of a larger body of work.
+
+---
+
+## Credits
+
+- **Design & Generative System** — Reyhaneh Daneshdoost
+- **Typefaces** — Cormorant Garamond · DM Mono
+- **Platform** — Reyrove Studio
+- **Edition** — Draconic Fractals, Autumn 2026
+
+### On AI tools
+
+Where technical obstacles were encountered, AI tools were used for debugging and code optimization. Every structural, aesthetic, and conceptual decision remained the artist's own.
+
+---
+
+## Links
+
+- Website — [reyrove.github.io](https://reyrove.github.io/)
+- Instagram — [@rey._.rove](https://www.instagram.com/rey._.rove/)
+- LinkedIn — [Reyhaneh Daneshdoost](https://www.linkedin.com/in/reyhaneh-daneshdoost-730481160/)
+- X — [@reyrove](https://x.com/reyrove)
+
+---
+
+© Draconic Fractals · All compositions reproducible by seed · Computational Textile Design
